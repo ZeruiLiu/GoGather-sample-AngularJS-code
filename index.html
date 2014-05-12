@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+				
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+						
+</head>
+		<body>
+<!-- Declare a new AngularJS app and associate the controller -->
+<form ng-app ng-controller="FormController">
+
+	<h2>Soccer Clubs Stadium Capacity</h2>
+	<div class="instruction">Click to select or deselect. Green means selected and red means unselected.</div>
+  
+<div class="total">
+		<!-- Calculate the total number of all chosen soccer stadiums capacity. -->
+		Total: <span class="right">{{total()}}</span>
+	</div>
+	<ul>
+		<li ng-repeat="club in clubs " ng-click="toggleActive(club)" ng-class="{active:club.active}">
+			
+			<span class="left">{{club.name}}</span> <span class="center">{{club.location}}</span> <span class="right">{{club.capacity}}</span>
+		</li>
+	</ul>
+
+</form>
+							
+						<script src="FormController.js"></script>
+</body>
+</html>
