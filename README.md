@@ -6,5 +6,6 @@ How to run and test it:
 
 1:  Get the three files: index.html style.css and FormController.js file. 
 2:  Place the three files in the same directory.
-3:  Open index.html in Chrome browser and users can play with it.
-4:  Please be aware that users need to open index.html with internet connection.
+3:  Open index.html in Chrome browser or any modern browser.
+4:  Users can select or deselect the club and the total capacity will be updated dynamically.
+5:  Please be aware that users need to open index.html with internet connection.
