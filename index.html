@@ -8,21 +8,22 @@
 						
 </head>
 		<body>
-<!-- Declare a new AngularJS app and associate the controller -->
+<!-- Declare a new AngularJS app and associate the controller FormController -->
 <form ng-app ng-controller="FormController">
 
 	<h2>Soccer Clubs Stadium Capacity</h2>
 	<div class="instruction">Click to select or deselect. Green means selected and red means unselected.</div>
   
 <div class="total">
-		<!-- Calculate the total number of all chosen soccer stadiums capacity. -->
-		Total: <span class="right">{{total()}}</span>
+	       <!-- Calculate the total number of all chosen soccer stadiums capacity. -->
+	       Total: <span class="right">{{total()}}</span>
 	</div>
 	<ul>
-		<li ng-repeat="club in clubs " ng-click="toggleActive(club)" ng-class="{active:club.active}">
-			
-			<span class="left">{{club.name}}</span> <span class="center">{{club.location}}</span> <span class="right">{{club.capacity}}</span>
-		</li>
+	    <!-- Loop the clubs array and show each of them in the list and add the click event to toggle the active/inactive-->
+	     <li ng-repeat="club in clubs " ng-click="toggleActive(club)" ng-class="{active:club.active}">
+		<!--display the name, location and capacity-->
+		 <span class="left">{{club.name}}</span> <span class="center">{{club.location}}</span> <span class="right">{{club.capacity}}</span>
+	     </li>
 	</ul>
 
 </form>
