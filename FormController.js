@@ -48,17 +48,19 @@ function FormController($scope){
 		}
 	];
 
+	//switch between active and inactive
 	$scope.toggleActive = function(s){
 		s.active = !s.active;
 	};
 
 	
-
+        // calculate the total capacity
 	$scope.total = function(){
 
 		var total = 0;
 
 		angular.forEach($scope.clubs, function(s){
+		//only calculate the selected stadium capacity
 			if (s.active){
 				total+= s.capacity;
 			}
